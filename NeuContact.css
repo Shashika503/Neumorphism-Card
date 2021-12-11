@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	
+}
+
+/*Neumorphism */
+#neumorphism {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #ebf5fc;
+	transition: 0.5s ease;
+}
+#neumorphism h2 {
+	position: absolute;
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	padding: 20px;
+	top: 10%;
+  	color: #6a9bd8;
+  	border-radius: 10px;
+	box-shadow: -2px -2px 5px rgba(255,255,255,1),
+				3px 3px 5px rgba(0,0,0,0.12); 
+}
+#neumorphism .container {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100px;
+	width: 480px;
+	margin: 20px auto 20px;
+	border-radius: 50px;
+	box-shadow: -2px -2px 5px rgba(255,255,255,1),
+				3px 3px 5px rgba(0,0,0,0.12); 
+}
+#neumorphism .container input[type="radio"] {
+	display: none;
+}
+#neumorphism .container label {
+	font-family: 'Poppins', sans-serif;
+	font-size:  27px;
+	font-weight: 600;
+	padding: 15px 35px;
+	color: #6a9bd8;
+	border-radius: 35px;
+}
+#neumorphism .container input[type="radio"]:checked + label {
+	box-shadow: inset -2px -2px 5px rgba(255,255,255,1),
+				inset 3px 3px 5px rgba(0,0,0,0.12);
+}
+#neumorphism ul {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	max-width: 90%;
+	background: #ebf5fc;
+	box-shadow: -2px -2px 5px rgba(255,255,255,1),
+				3px 3px 5px rgba(0,0,0,0.1); 
+}
+#neumorphism ul li {
+	position: relative;
+	list-style: none;
+	text-align: center;
+	margin: 10px;
+}
+#neumorphism ul li label {
+	position: relative;
+}
+#neumorphism ul li label input[type="checkbox"] {
+ 	position: absolute;
+ 	opacity: 0;
+ 	cursor: pointer;
+}
+#neumorphism ul li label .icon-box {
+ 	width: 80px;
+ 	height: 80px;
+ 	background: #ebf5fc;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	border-radius: 10px;
+ 	box-shadow: -2px -2px 5px rgba(255,255,255,1),
+				3px 3px 5px rgba(0,0,0,0.1); 
+}
+#neumorphism ul li label .icon-box .fab {
+  	font-size: 30px;
+  	color: #6a9bd8;
+}
+#neumorphism ul li label input[type="checkbox"]:checked ~ .icon-box {
+   	box-shadow: inset -2px -2px 5px rgba(255,255,255,1),
+				inset 3px 3px 5px rgba(0,0,0,0.1);
+}
+/*Neumorphism night section*/
+#neumorphism.night {
+	background: #18191f;
+}
+#neumorphism.night h2 {
+	color: #e76a16;
+	text-shadow: 0 0 15px  #e47e1e;
+	box-shadow: -2px -2px 5px rgba(255,255,255,0.1),
+				3px 3px 5px rgba(0,0,0,0.2); 
+}
+#neumorphism.night .container {
+	box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+				inset -5px -5px 15px rgba(255,255,255,0.1),
+				5px 5px 15px rgba(0,0,0,0.3),
+				-5px -5px 15px rgba(255,255,255,0.1);
+}
+#neumorphism.night .container label {
+	color: #555;
+}
+#neumorphism.night .container label:hover,
+#neumorphism.night ul li:hover label .icon-box .fa  {
+	color: #22c1dd;
+	text-shadow: 0 0 15px  #1ebce4;
+}
+#neumorphism.night ul {
+	background: transparent;
+	box-shadow: -2px -2px 3px rgba(255,255,255,0.05),
+				3px 3px 3px rgba(0,0,0,0.2); 
+} 
+#neumorphism.night ul li label .icon-box {
+	background: transparent;
+	box-shadow: -2px -2px 5px rgba(255,255,255,0.1),
+				3px 3px 5px rgba(0,0,0,0.2); 
+}
+#neumorphism.night ul li label .icon-box .fab {
+    color: #2d2f30;
+}
+#neumorphism.night ul li:hover label .icon-box .fab  {
+	box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+				inset -5px -5px 15px rgba(255,255,255,0.1),
+				5px 5px 15px rgba(0,0,0,0.3),
+				-5px -5px 15px rgba(255,255,255,0.1);	
+}
+#neumorphism.night ul li label input[type="checkbox"]:checked ~ .icon-box {
+	box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+				inset -5px -5px 15px rgba(255,255,255,0.1),
+				5px 5px 15px rgba(0,0,0,0.3),
+				-5px -5px 15px rgba(255,255,255,0.1);
+}
+#neumorphism.night ul li label input[type="checkbox"]:checked ~ .icon-box .fab {
+	color: #00f3ff;
+	text-shadow: 0 0 15px  #00f3ff;
+}
+#neumorphism.night .container input[type="radio"]:checked + label {
+    color: #22c1dd;
+	text-shadow: 0 0 15px  #1ebce4;
+	box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+				inset -5px -5px 15px rgba(255,255,255,0.1),
+				5px 5px 15px rgba(0,0,0,0.3),
+				-5px -5px 15px rgba(255,255,255,0.1);
+} 
+.slider {
+	position: absolute;
+	left: 46%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 6;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #dc717d;
+	cursor: move;
+  	box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 
+  				0 0 10px rgba(0, 0, 0, 0.6), 
+  				inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
